@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* CONFIGURAÇÕES GERAIS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0D1014;
+    color: white;
+}
+
+
+
+/* CABEÇALHO*/
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8px;
+    gap: 20px;
+}
+
+.logo img {
+    width: 75px;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #E51B23;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+/* Página atual no menu */
+nav a.ativo {
+    color: #E51B23;
+    text-decoration: underline;
+    text-decoration-color: #E51B23;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
+/* APRESENTAÇÃO INICIAL */
+.inicio {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 8%;
+
+    background: 
+        linear-gradient(
+            90deg,
+            rgba(13,16,20,0.55),
+            rgba(13,16,20,0.35)
+        ),
+        url(../imagens/imagemfundohome.png);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.conteudo_inicio {
+    max-width: 650px;
+}
+
+.inicio .destaque {
+    color: #E51B23;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.inicio h1 {
+    color: white;
+    font-size: 48px;
+    line-height: 1.35;
+    max-width: 550px;
+    margin-bottom: 18px;
+}
+
+.inicio > p:not(.destaque) {
+    color: #D0D0D0;
+    font-size: 18px;
+    line-height: 1.4;
+    max-width: 600px;
+    margin-bottom: 24px;
+}
+
+/* BOTÃO */
+.inicio .botao {
+    display: inline-block;
+    background-color: #E51B23;
+    color: white;
+    font-size: 18px;
+    padding: 17px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.botao:hover {
+    background-color: #B9141B;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #080A0D;
+    text-align: center;
+    padding: 25px;
+    color: white;
+}
+
+/* ADAPTAÇÃO PARA CELULARES */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .inicio {
+        min-height: 65vh;
+        padding: 45px 7%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .conteudo-inicio > p:not(.destaque) {
+        font-size: 16px;
+    }
+}
