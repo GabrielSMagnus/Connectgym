@@ -16,6 +16,15 @@ header {
     padding: 10px 8px;
     gap: 20px;
 }
+body {
+    background: 
+        linear-gradient(
+            90deg,
+            rgba(13,16,20,0.55),
+            rgba(13,16,20,0.35)
+        ),
+        url(../imagens/fundo-academia.png);
+}
 
 .logo img {
     width: 75px;
@@ -47,36 +56,104 @@ nav a.ativo {
     text-underline-offset: 6px;
 }
 
-.Endereço{
-    padding: 25px;
-    
-   
-}
 
-.caixa-infoEndereço{
-    flex: 1;
+/* ORGANIZAÇÃO DAS CAIXAS */
+.caixa-infoDuvida,
+.caixa-infoEndereço,
+.caixa-info {
     background-color: #1c1c1c;
-    color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-sizing: border-box;
-}
-.caixa-info{
-    background-color: #1c1c1c;
-    border: 2px solid white;
+    border: 2px solid #1c1c1c;
     border-radius: 10px;
     padding: 25px;
-    width: 250px;
+    width: 300px;
+    min-height: 300px;
     color: white;
-    margin: auto;
 }
 
-.atendimento{
- padding: 25px;
+/* ENDEREÇO */
+.caixa-infoEndereço {
+    margin: 0;
 }
-/* .horario{
 
-} */
+h3.Endereço{
+    text-align: center;
+}
+p.rota{
+    text-align: center;
+}
+
+.chegar {
+  display: block;
+  width: fit-content;
+  margin: 16px auto 0;
+  padding: 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: red;
+}
+
+/* HORÁRIO */
+.caixa-info {
+    margin: 0;
+}
+h3.atendimento{
+    text-align: center;
+}
+p.horario{
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* TÍTULOS */
+.Duvida,
+.Endereço,
+.atendimento {
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+/* TEXTOS */
+.caixa-infoDuvida p,
+.caixa-infoEndereço p,
+.caixa-info p {
+    line-height: 1.6;
+}
+
+/* COLOCA AS CAIXAS LADO A LADO */
+.caixa-infoDuvida,
+.caixa-infoEndereço,
+.caixa-info {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+/* DUVIDAS */
+
+h3.Duvida{
+    text-align: center;
+} 
+
+p.telefone{
+    text-align: center;
+}
+
+a.whatsapp{
+    display: block;
+  width: fit-content;
+  margin: 16px auto 0;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: red;
+}
+
+
+
 
 
 footer {
@@ -85,6 +162,10 @@ footer {
     padding: 25px;
     color: white;
 }
+
+
+
+
 /* ADAPTAÇÃO PARA CELULARES */
 @media (max-width: 600px) {
     header {
@@ -98,16 +179,13 @@ footer {
         gap: 15px;
     }
 
-    .inicio {
-        min-height: 65vh;
-        padding: 45px 7%;
-    }
-
-    h1 {
-        font-size: 36px;
-    }
-
-    .conteudo-inicio > p:not(.destaque) {
-        font-size: 16px;
+    .caixa-infoDuvida,
+    .caixa-infoEndereço,
+    .caixa-info {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+        min-height: auto;
+        margin: 15px auto;
     }
 }
