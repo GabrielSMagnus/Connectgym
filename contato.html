@@ -1,50 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="Conheça a Connect Gym, academia em Urussanga - SC.">
-    <meta name="author" content="Connect Gym">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CONNECTGYM</title>
-    
-    <link rel="shortcut icon" href="imagens/fotoTelefoneContato.png" type="image/x-icon">
-    <link rel="stylesheet" href="estilo/">
-    <script src="js/script.js"></script>
+  <meta name="description" content="Conheça a Connect Gym, academia em Urussanga - SC.">
+  <meta name="author" content="Connect Gym">
+
+  <title>CONNECTGYM</title>
+
+  <link rel="shortcut icon" href="imagens/fotoTelefoneContato.png" type="image/x-icon">
+  <link rel="stylesheet" href="estilo/contato.css">
+  <script src="js/script.js"></script>
 </head>
+
 <body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="imagens/logoacademia.jpg" alt="Logo da Connect Gym">
+    </a>
 
-<h2>Bora conectar seu primeiro treino?</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="academia.html">ACADEMIA</a></li>
+        <li><a href="modalidades.html">MODALIDADES</a></li>
+        <li><a href="contato.html" class="ativo">CONTATO</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<form class="contact-form" id="contactForm">
-  <label>
-    Nome
-    <input type="text" name="nome" required placeholder="Seu nome completo">
-  </label>
 
-  <label>
-    WhatsApp
-    <input type="tel" name="whatsapp" required placeholder="(48) 9 9999-9999">
-  </label>
 
-  <label>
-    Mensagem
-    <textarea name="mensagem" rows="4" placeholder="Quero saber mais sobre os planos..."></textarea>
-  </label>
 
-  <button type="submit" class="btn btn-accent">Enviar mensagem</button>
-  <p class="form-status" id="formStatus" role="status"></p>
-</form>
+  <section class="caixa-infoEndereço">
+    <h3 class="Endereço">Endereço</h3>
+    <p class="rota">R. Angélica Colodel Bettiol, 59 - Centro, Urussanga - SC, 88840-000</p>
+    <a class="chegar"
+      href="https://maps.google.com/?cid=3183674994401603496&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"
+      target="_blank" rel="noopener">Como chegar</a>
+  </section>
 
-<h3>Endereço</h3>
-<p class="placeholder-note">R. Angélica Colodel Bettiol, 59 - Centro, Urussanga - SC, 88840-000</p>
 
-<h3>Horário de atendimento</h3>
-<p>
-  Seg a Sex: 5h às 22h<br>
-  Sábado: 7h30 às 14h<br>
-  Domingo: 9h às 12h
-</p>
+  <section class="caixa-info">
+    <h3 class="atendimento">Horário de atendimento</h3>
+    <p class="horario">
+      Seg a Sex: 5h às 22h<br>
+      Sábado: 7h30 às 14h<br>
+      Domingo: 9h às 12h
+    </p>
+  </section>
+
+  <section class="caixa-infoDuvida">
+    <h3 class="Duvida">Dúvidas</h3>
+    <p class="telefone">Ficou com alguma dúvida? Chama a gente no WhatsApp que a equipe responde rapidinho!</p>
+    <a class="whatsapp"
+      href="https://wa.me/5548991204693?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Connect%20Gym."
+      target="_blank" rel="noopener">Chamar no WhatsApp</a>
+
+
+
+  </section>
+  <footer>
+    <p>&copy; 2026 Connect Gym. Todos os direitos reservados.</p>
+  </footer>
 
 </body>
+
+</html>
