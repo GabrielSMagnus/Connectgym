@@ -15,8 +15,13 @@ header {
     align-items: center;
     padding: 10px 8px;
     gap: 20px;
+    text-align: left;
 }
 body {
+   min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background: 
         linear-gradient(
             90deg,
@@ -24,6 +29,7 @@ body {
             rgba(13,16,20,0.35)
         ),
         url(../imagens/fundo-academia.png);
+        
 }
 
 .logo img {
@@ -54,6 +60,25 @@ nav a.ativo {
     text-decoration-color: #E51B23;
     text-decoration-thickness: 2px;
     text-underline-offset: 6px;
+}
+/* TITULO */
+.titulo-pagina {
+    width: 100%;
+    color: white;
+    font-size: 32px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* A BARRINHA VERMELHA EMBAIXO */
+.titulo-pagina::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #E51B23;
+    margin: 12px auto 0;
+    border-radius: 2px;
 }
 
 
@@ -86,7 +111,7 @@ p.rota{
   display: block;
   width: fit-content;
   margin: 16px auto 0;
-  padding: 22px;
+   padding: 14px 22px;
   border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
@@ -130,6 +155,7 @@ p.horario{
     margin: 20px;
 }
 
+
 /* DUVIDAS */
 
 h3.Duvida{
@@ -152,6 +178,16 @@ a.whatsapp{
   background: red;
 }
 
+/* MAPA */
+.mapa {
+    width: 100%;
+    max-width: 940px;
+    height: 350px;
+    border: 0;
+    border-radius: 10px;
+    margin: 20px 20px 40px;
+}
+
 
 
 
@@ -161,10 +197,25 @@ footer {
     text-align: center;
     padding: 25px;
     color: white;
+     margin-top: auto;
+
 }
-
-
-
+/* ICONE INSTA NO RODAPE    */
+.instagram {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* IMAGEM DENTRO DO LINK */
+.instagram img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: 0.2s;
+}
+/* QUANDO PASSA O MOUSE */
+.instagram img:hover {
+    transform: scale(1.15);
+}
 
 /* ADAPTAÇÃO PARA CELULARES */
 @media (max-width: 600px) {
@@ -187,5 +238,8 @@ footer {
         max-width: 340px;
         min-height: auto;
         margin: 15px auto;
+    }
+     .mapa {
+        height: 250px;
     }
 }
