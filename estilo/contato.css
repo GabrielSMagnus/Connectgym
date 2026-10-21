@@ -239,8 +239,10 @@ footer {
         min-height: auto;
         margin: 15px auto;
     }
-     .mapa {
-        height: 250px;
-        width: calc(100% - 30px);
+      .mapa {
+        width: 100%;
+        max-width: 340px;
+        height: 220px;
+        margin: 15px auto 30px;
     }
 }
