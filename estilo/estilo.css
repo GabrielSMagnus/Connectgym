@@ -66,12 +66,10 @@ nav a.ativo {
     align-items: flex-start;
     padding: 60px 8%;
 
-    background: 
-        linear-gradient(
-            90deg,
-            rgba(13,16,20,0.55),
-            rgba(13,16,20,0.35)
-        ),
+    background:
+        linear-gradient(90deg,
+            rgba(13, 16, 20, 0.55),
+            rgba(13, 16, 20, 0.35)),
         url(../imagens/imagemfundohome.png);
 
     background-size: cover;
@@ -98,7 +96,7 @@ nav a.ativo {
     margin-bottom: 18px;
 }
 
-.inicio > p:not(.destaque) {
+.inicio>p:not(.destaque) {
     color: #D0D0D0;
     font-size: 18px;
     line-height: 1.4;
@@ -122,6 +120,168 @@ nav a.ativo {
 .botao:hover {
     background-color: #B9141B;
 }
+
+/* ESTILO DOS PLANOS */
+
+.planos {
+    padding: 35px 20px 55px;
+}
+
+.planos h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.botao-plano {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px 15px;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background-color: #E51B23;
+    border-radius: 9px;
+
+    transition: background-color 0.3s ease;
+}
+
+.botao-plano:hover {
+    background: #B9141B;
+}
+
+
+/* AREA DO CARROSEL */
+.carrossel-planos {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px;
+    height: 420px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.palco-planos {
+    position: relative;
+    height: 480px;
+    min-width: 0;
+}
+
+/* TODOS OS CARDS */
+.carrossel-planos .plano-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 350px;
+    min-width: 320px;
+    min-height: 290px;
+    box-sizing: border-box;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: white;
+    color: black;
+
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transform: translate(-50%, -50%) scale(0.82);
+    opacity: 0;
+    visibility: hidden;
+    filter: brightness(0.55);
+    z-index: 0;
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.7s ease,
+        filter 0.7s ease;
+}
+
+/* CARD CENTRAL */
+
+.carrossel-planos .plano-card.ativo {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+    filter: brightness(1);
+    z-index: 3;
+
+    border: 2px solid #E51B23;
+    box-shadow: 0 12px 35px rgba(229, 27, 35, 0.18);
+}
+
+/* CARD DA ESQUERDA*/
+.carrossel-planos .plano-card.esquerda {
+    transform: translate(calc(-50% - 300px), -50%) scale(0.82);
+    opacity: 0.75;
+    visibility: visible;
+    filter: brightness(0.65);
+    z-index: 2;
+}
+
+/* CARD DA DIREITA*/
+.carrossel-planos .plano-card.direita {
+    transform: translate(calc(-50% + 300px), -50%) scale(0.82);
+    opacity: 0.65;
+    visibility: visible;
+    filter: brightness(0.5);
+    z-index: 2;
+}
+
+/* TITULO DO PLANO*/
+.plano-card h3 {
+    font-size: 23px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* LISTA DE PREÇOS */
+.plano-card .precos-plano {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.plano-card .precos-plano li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    font-size: 14px;
+}
+
+
+.plano-card .precos-plano strong {
+    text-align: right;
+    white-space: nowrap;
+}
+
+
+.carrossel-planos {
+    position: relative;
+    height: 520px;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
 
 /* RODAPÉ */
 footer {
@@ -153,7 +313,7 @@ footer {
         font-size: 36px;
     }
 
-    .conteudo-inicio > p:not(.destaque) {
+    .conteudo-inicio>p:not(.destaque) {
         font-size: 16px;
     }
 }
