@@ -215,17 +215,22 @@ footer {
 
 /* ADAPTAÇÃO PARA CELULARES */
 @media (max-width: 600px) {
-    header {
+   header {
         flex-direction: column;
-        padding: 15px;
+        padding: 12px 8px;
+        gap: 8px;
     }
 
     nav ul {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
-        gap: 15px;
+        gap: clamp(8px, 3vw, 16px);
     }
 
+    nav a {
+        font-size: clamp(11px, 3.3vw, 14px);
+        white-space: nowrap;
+    }
     .caixa-infoDuvida,
     .caixa-infoEndereço,
     .caixa-info {
