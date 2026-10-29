@@ -282,14 +282,32 @@ nav a.ativo {
     overflow: hidden;
 }
 
-
-/* RODAPÉ */
+/* rodape */
 footer {
     background-color: #080A0D;
     text-align: center;
     padding: 25px;
     color: white;
+     margin-top: auto;
+
 }
+/* ICONE INSTA NO RODAPE    */
+.instagram {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* IMAGEM DENTRO DO LINK */
+.instagram img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: 0.2s;
+}
+/* QUANDO PASSA O MOUSE */
+.instagram img:hover {
+    transform: scale(1.15);
+}
+
 
 /* ADAPTAÇÃO PARA CELULARES */
 @media (max-width: 600px) {
