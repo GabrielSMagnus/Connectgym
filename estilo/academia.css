@@ -11,8 +11,10 @@
 body {
     background-color: #0D1014;
     color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
- 
 /* CABEÇALHO */
 header {
     background-color: white;
@@ -173,14 +175,15 @@ h2 {
 }
 
 /* rodape */
+/* rodape */
 footer {
     background-color: #080A0D;
     text-align: center;
     padding: 25px;
     color: white;
      margin-top: auto;
-}
 
+}
 /* ICONE INSTA NO RODAPE    */
 .instagram {
     display: inline-block;
@@ -197,6 +200,7 @@ footer {
 .instagram img:hover {
     transform: scale(1.15);
 }
+
 /* ADAPTAÇÃO PARA CELULARES */
 @media (max-width: 600px) {
     header {
