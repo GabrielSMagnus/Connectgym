@@ -1,0 +1,218 @@
+@charset "UTF-8";
+ 
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+body {
+    background-color: #0D1014;
+    color: white;
+}
+ 
+/* CABEÇALHO */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8px;
+    gap: 20px;
+}
+ 
+.logo img {
+    width: 75px;
+    display: block;
+}
+ 
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+ 
+nav a {
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+nav a:hover {
+    color: #E51B23;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+ 
+/* Página atual no menu */
+nav a.ativo {
+    color: #E51B23;
+    text-decoration: underline;
+    text-decoration-color: #E51B23;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+ 
+/* TÍTULO DA EQUIPE */
+h2 {
+    padding: 40px 0 24px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+ 
+/* CARROSSEL */
+ 
+/* A seção rola na horizontal. Como a foto para no centro, só uma aparece bem destacada */
+.carrossel {
+    position: relative;
+    width: min(100%, 900px);
+    margin: 0 auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+/* Esconde a barra de rolagem no Chrome e no Safari */
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+ 
+/* A fila de fotos. O padding deixa a primeira foto começar no centro */
+.trilho {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 48px calc(50% - 130px);
+}
+ 
+/* Cada foto tem 260 pixels de largura e para no centro ao rolar */
+.slide {
+    position: relative;
+    flex: 0 0 260px;
+    scroll-snap-align: center;
+    opacity: 0.35;
+    transform: scale(0.9);
+    transition: opacity 0.4s, transform 0.4s;
+}
+ 
+/* A foto do centro fica maior e sem escurecimento */
+.slide.ativo {
+    opacity: 1;
+    transform: scale(1.25);
+}
+ 
+/* Foto em formato 4:5, cortada sem ser esticada */
+.slide img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+ 
+/* Borda vermelha na foto do centro */
+.slide.ativo img {
+    border-color: #E51B23;
+}
+ 
+/* Nome sobre a parte de baixo da foto */
+.slide h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 56px 16px 16px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    border-radius: 0 0 12px 12px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+ 
+/* Setas e bolinhas */
+.controles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+ 
+.seta {
+    width: 44px;
+    height: 44px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+}
+ 
+.bolinhas {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    justify-content: center;
+}
+ 
+.bolinha {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 50%;
+    background: #444444;
+    cursor: pointer;
+}
+ 
+/* A bolinha da foto atual fica vermelha */
+.bolinha[aria-current="true"] {
+    background: #E51B23;
+}
+
+/* rodape */
+footer {
+    background-color: #080A0D;
+    text-align: center;
+    padding: 25px;
+    color: white;
+     margin-top: auto;
+}
+
+/* ICONE INSTA NO RODAPE    */
+.instagram {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* IMAGEM DENTRO DO LINK */
+.instagram img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: 0.2s;
+}
+/* QUANDO PASSA O MOUSE */
+.instagram img:hover {
+    transform: scale(1.15);
+}
+/* ADAPTAÇÃO PARA CELULARES */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 12px 8px;
+        gap: 8px;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: clamp(8px, 3vw, 16px);
+    }
+
+    nav a {
+        font-size: clamp(11px, 3.3vw, 14px);
+        white-space: nowrap;
+    }
+}
