@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+/* rodape */
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 8% 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 25px;
+}
+
+/* TITULOS DAS SEÇÕES */
+footer h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+    color: white;
+}
+
+/*IDENTIDADE */
+.logo-rodape img {
+    width: 85px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.rodape-identidade p {
+    color: #BFC3C9;
+    font-size: 14px;
+    text-align: initial;
+}
+
+/* NAVEGAÇÃO DO RODAPE*/
+.rodape-navegacao ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rodape-navegacao li {
+    margin-bottom: 12px;
+}
+
+/*CONTATO E NAVEGAÇÃO */
+.rodape-navegacao a, .rodape-contato a {
+    color: #BFC3C9;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.rodape-contato p {
+    color: #BFC3C9;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* EFEITO DOS LINKS */
+.rodape-navegacao a:hover, .rodape-contato a:hover {
+    color: #E51B23;
+}
+
+/* REDES SOCIAIS */
+.instagram {
+    display: inline-block;
+}
+
+.instagram img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: 0.2s;
+}
+
+.instagram img:hover {
+    transform: scale(1.15);
+}
+
+/* DIREITOS AUTORAIS */
+.rodape-direitos {
+    grid-column: 1 / -1;
+    border-top: 1px solid #33383F;
+    padding-top: 20px;
+    text-align: center;
+    color: #AEB3BA;
+    font-size: 13px;
+}
+
+
+/* ADAPTAÇÃO PARA CELULARES */
+@media (max-width: 600px) {
+
+    /* RODAPÉ EM TELAS PEQUENAS */
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+        padding: 30px 7% 20px;
+    }
+
+    /* DIREITOS AUTORAIS */
+    .rodape-direitos {
+      grid-column: 1 / -1;
+    }
+}
