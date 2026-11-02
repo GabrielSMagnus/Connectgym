@@ -263,7 +263,4 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
     }
-    .galeria img:active {
-        transform: scale(1.1);
-    }
 }
