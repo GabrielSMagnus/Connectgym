@@ -49,6 +49,78 @@ function atualizarCarrossel() {
 atualizarCarrossel();
 
 
+// Seleciona a área do carrossel.
+const carrossel = document.querySelector(".carrossel-planos");
+
+// Guarda a posição horizontal inicial do movimento.
+let inicioX = 0;
+
+// Indica se o usuário começou a arrastar.
+let arrastando = false;
+
+// Detecta quando o usuário pressiona o mouse
+// ou coloca o dedo sobre o carrossel.
+carrossel.addEventListener("pointerdown", function(event) {
+
+    // Guarda a posição horizontal inicial.
+    inicioX = event.clientX;
+
+    // Informa que o movimento começou.
+    arrastando = true;
+
+});
+
+
+// Detecta quando o usuário solta o mouse ou o dedo.
+document.addEventListener("pointerup", function(event) {
+
+    // Se não estava arrastando, não faz nada.
+    if (!arrastando) {
+        return;
+    }
+
+    // Calcula a distância entre o início e o fim do movimento.
+    let diferenca = event.clientX - inicioX;
+
+    // Finaliza o movimento atual.
+    arrastando = false;
+
+
+    // Verifica se o usuário arrastou para a esquerda
+    // por mais de 50 pixels.
+    if (diferenca < -50) {
+
+        // Avança para o próximo cartão.
+        planoAtual = (planoAtual + 1) % cards.length;
+
+        // Atualiza as posições dos cartões.
+        atualizarCarrossel();
+
+    }
+
+    // Verifica se o usuário arrastou para a direita
+    // por mais de 50 pixels.
+    else if (diferenca > 50) {
+
+        // Volta para o cartão anterior.
+        planoAtual = (planoAtual - 1 + cards.length) % cards.length;
+
+        // Atualiza as posições dos cartões.
+        atualizarCarrossel();
+
+    }
+
+});
+
+
+// Caso o movimento seja interrompido pelo navegador,
+// cancela o estado de arrastamento.
+document.addEventListener("pointercancel", function() {
+    arrastando = false;
+});
+
+
+
 // Executa uma função automaticamente a cada 5000 milissegundos (5 segundos).
 setInterval(function() {
 

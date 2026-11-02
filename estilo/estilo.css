@@ -128,8 +128,10 @@ nav a.ativo {
 }
 
 .planos h2 {
+    padding-top: 20px;
+
     text-align: center;
-    font-size: 32px;
+    font-size: 38px;
     margin-bottom: 10px;
 }
 
@@ -167,6 +169,13 @@ nav a.ativo {
     height: 420px;
     margin: 0 auto;
     overflow: hidden;
+
+    touch-action: pan-y;
+    cursor: grab;
+}
+
+.carrossel-planos:active {
+    cursor: grabbing;
 }
 
 .palco-planos {
