@@ -213,6 +213,32 @@ h2 {
     background: #E51B23;
 }
 
+/* rodape */
+/* rodape */
+footer {
+    background-color: #080A0D;
+    text-align: center;
+    padding: 25px;
+    color: white;
+     margin-top: auto;
+
+}
+/* ICONE INSTA NO RODAPE    */
+.instagram {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* IMAGEM DENTRO DO LINK */
+.instagram img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: 0.2s;
+}
+/* QUANDO PASSA O MOUSE */
+.instagram img:hover {
+    transform: scale(1.15);
+}
 
 /* ADAPTAÇÃO PARA CELULARES */
 @media (max-width: 600px) {
@@ -232,9 +258,20 @@ h2 {
         font-size: clamp(11px, 3.3vw, 14px);
         white-space: nowrap;
     }
-    /* galeria no celular */
-    .galeria {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+    
+}
+/* EFEITO NO COMPUTADOR (com mouse) */
+@media (hover: hover) and (pointer: fine) {
+    .galeria img:hover {
+        transform: scale(1.25);
+        z-index: 2;
+        box-shadow: 8px 8px 0 #E51B23;
+    }
+}
+
+/* EFEITO NO CELULAR (toque) */
+@media (hover: none) {
+    .galeria img:active {
+        transform: scale(1.1);
     }
 }
