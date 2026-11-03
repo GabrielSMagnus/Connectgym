@@ -258,6 +258,11 @@ footer {
         font-size: clamp(11px, 3.3vw, 14px);
         white-space: nowrap;
     }
+    /* galeria no celular */
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
     
 }
 /* EFEITO NO COMPUTADOR (com mouse) */
