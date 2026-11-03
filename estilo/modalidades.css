@@ -181,7 +181,25 @@ nav a.ativo {
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 670px) {
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        padding: 12px 8px;
+        gap: 8px;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: clamp(8px, 3vw, 16px);
+    }
+
+    nav a {
+        font-size: clamp(11px, 3.3vw, 14px);
+        white-space: nowrap;
+    }
+
 
     .apresentacao-modalidades {
         padding: 65px 20px;
@@ -227,22 +245,3 @@ nav a.ativo {
 
 
 }
-
-/* ADAPTAÇÃO PARA CELULARES */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        padding: 12px 8px;
-        gap: 8px;
-    }
-
-    nav ul {
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: clamp(8px, 3vw, 16px);
-    }
-
-    nav a {
-        font-size: clamp(11px, 3.3vw, 14px);
-        white-space: nowrap;
-    }
