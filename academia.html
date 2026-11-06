@@ -29,9 +29,11 @@
                 <li><a href="contato.html">CONTATO</a></li>
             </ul>
         </nav>
-
     </header>
+
     <h1>Conheça Nossa Academia</h1>
+
+    <!-- GALERIA DA ACADEMIA: grade de fotos -->
     <section class="galeria">
         <img src="imagens/academia1.jpeg.jpeg" alt="Sala com barras e banco de musculação">
         <img src="imagens/academia2.jpeg" alt="Aparelhos Shark no salão da academia">
@@ -39,53 +41,19 @@
         <img src="imagens/academia4.jpeg" alt="Salão com aparelhos de musculação e esteiras">
         <img src="imagens/academia5.jpeg" alt="Área de pesos e aparelhos da academia">
         <img src="imagens/academia6.jpeg" alt="Área de musculação com halteres e aparelhos">
-        <img src="imagens/academia6.jpeg" alt="Sala com bancos e bolas de treino">
+        <img src="imagens/academia7.jpeg" alt="Sala com bancos e bolas de treino">
         <img src="imagens/academia8.jpeg" alt="Esteiras e bicicletas da Connect Gym">
     </section>
+
     <h2>Conheça nossa Equipe</h2>
-    <section class="carrossel" id="carrossel">
-        <ul class="trilho" id="trilho">
-            <li class="slide ativo">
-                <img src="imagens/imagemAdrian.jpeg" alt="Foto integrante da academia adrian">
-                <h3>Adrian Amoriso</h3>
-            </li>
 
-            <li class="slide">
-                <img src="imagens/imagemVitoria.jpeg" alt="Foto integrante da academia Vitoria">
-                <h3>Vitoria Cucke</h3>
-            </li>
-
-            <li class="slide">
-                <img src="imagens/imagens.jpeg" alt="Foto integrante da academia Anderson">
-                <h3>Anderson</h3>
-            </li>
-
-            <li class="slide">
-                <img src="imagens/ImagemPaola.jpeg" alt="Foto integrante da academia Paola">
-                <h3>Paola Gomes</h3>
-            </li>
-
-            <li class="slide">
-                <img src="imagens/imagemMariaEduarda.jpeg" alt="Foto integrante da academia Maria Eduarda">
-                <h3>Maria Eduarda</h3>
-            </li>
-
-            <li class="slide">
-                <img src="imagens/imagemNatalia.jpeg" alt="Foto integrante da academia Natalia">
-                <h3>Natalia Possamai</h3>
-            </li>
-            <li class="slide">
-                <img src="imagens/imagemCaue.jpeg" alt="Foto integrante da academia Caue">
-                <h3>Caue Silva</h3>
-            </li>
-        </ul>
-
+    <!-- VITRINE DA EQUIPE: uma pessoa por vez (js/carrossel.js) -->
+    <section class="vitrine">
+        <img id="moldura" src="imagens/imagemAdrian.jpeg" alt="Foto de integrante da equipe">
+        <h3 id="nome">Adrian Amoriso</h3>
     </section>
-    <nav class="controles">
-        <ul class="bolinhas" id="bolinhas"></ul>
-    </nav>
+
     <footer>
-        
         <section class="rodape-identidade">
             <a href="index.html" class="logo-rodape">
                 <img src="imagens/logoacademia.png" alt="Logo da academia Connect Gym">
@@ -110,12 +78,13 @@
 
             <p>Rua Angélica Colodel Bettiol, 59 — Centro, Urussanga - SC</p>
 
-            <a href="https://wa.me/5548991204693?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Connect%20Gym." target="_blank" rel="noopener">
+            <a href="https://wa.me/5548991204693?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Connect%20Gym."
+                target="_blank" rel="noopener">
                 Fale conosco pelo WhatsApp
             </a>
         </section>
 
-        <section class="rodape-redes"> 
+        <section class="rodape-redes">
             <h3>Redes Sociais</h3>
 
             <a href="https://www.instagram.com/connectgym_/?hl=pt-br" class="instagram" target="_blank" rel="noopener">
@@ -126,8 +95,9 @@
         <section class="rodape-direitos">
             <p>&copy; 2026 Connect Gym. Todos os direitos reservados.</p>
         </section>
-    </footer>   
+    </footer>
 
     <script src="js/carrossel.js" defer></script>
-
 </body>
+
+</html>
