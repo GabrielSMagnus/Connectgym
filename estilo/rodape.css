@@ -6,6 +6,8 @@ footer {
     color: white;
     padding: 40px 8% 20px;
 
+    text-align: center;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 35px 25px;
@@ -19,16 +21,26 @@ footer h3 {
 }
 
 /*IDENTIDADE */
+
+.logo-rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
 .logo-rodape img {
     width: 85px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 12px;
 }
 
 .rodape-identidade p {
     color: #BFC3C9;
-    font-size: 14px;
-    text-align: initial;
+    font-size: 14px;    
 }
 
 /* NAVEGAÇÃO DO RODAPE*/

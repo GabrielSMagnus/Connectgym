@@ -9,57 +9,22 @@
 }
 
 body {
-    background-color: #0D1014;
+    background-image:
+        linear-gradient(90deg, rgba(13, 16, 20, 0.55), rgba(13, 16, 20, 0.35)),
+        url(../imagens/fundo-academia.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
+
 }
 
 
-/* CABEÇALHO*/
-header {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 8px;
-    gap: 20px;
-}
-
-.logo img {
-    width: 75px;
-    display: block;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-nav a {
-    color: #222222;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #E51B23;
-    text-decoration: underline;
-    transition: 0.2s;
-}
-
-/* Página atual no menu */
-nav a.ativo {
-    color: #E51B23;
-    text-decoration: underline;
-    text-decoration-color: #E51B23;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 6px;
-}
 
 /* APRESENTAÇÃO DA PÁGINA*/
 
 .apresentacao-modalidades {
-    background-color: #0D1014;
     color: white;
     text-align: center;
     padding: 90px 20px;
@@ -84,7 +49,6 @@ nav a.ativo {
 /* SEÇÃO DAS MODALIDADES*/
 
 .modalidade {
-    background-color: #0D1014;
     padding-bottom: 30px;
 }
 
@@ -183,23 +147,7 @@ nav a.ativo {
 
 @media (max-width: 600px) {
 
-    header {
-        flex-direction: column;
-        padding: 12px 8px;
-        gap: 8px;
-    }
-
-    nav ul {
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: clamp(8px, 3vw, 16px);
-    }
-
-    nav a {
-        font-size: clamp(11px, 3.3vw, 14px);
-        white-space: nowrap;
-    }
-
+    
 
     .apresentacao-modalidades {
         padding: 65px 20px;
