@@ -1,6 +1,7 @@
+
 @charset "UTF-8";
 
-/* CONFIGURAÇÕES GERAIS*/
+/* Configurações gerais */
 * {
     margin: 0;
     padding: 0;
@@ -17,13 +18,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: white;
-
 }
 
-
-
-/* APRESENTAÇÃO DA PÁGINA*/
-
+/* Apresentação da página */
 .apresentacao-modalidades {
     color: white;
     text-align: center;
@@ -40,33 +37,26 @@ body {
     color: #E51B23;
 }
 
-.apresentacao-modalidades p  {
+.apresentacao-modalidades p {
     color: white;
     font-size: 18px;
 }
 
-
-/* SEÇÃO DAS MODALIDADES*/
-
+/* Seções das modalidades */
 .modalidade {
     padding-bottom: 30px;
 }
 
-.modalidade > h2 {
-    width: 80%;
-    max-width: 1100px;
-    margin: 0 auto 35px;
-    color: #E51B23;
-    font-size: 38px;
+.modalidade + .modalidade {
+    padding-top: 50px;
+    padding-bottom: 90px;
 }
 
-/* TEXTOS */
-
+/* Textos e títulos das modalidades */
 .texto-modalidade {
     width: 80%;
     max-width: 1100px;
     margin: 0 auto;
-    padding-bottom: 55px;
     color: white;
     padding-bottom: 0;
 }
@@ -85,31 +75,7 @@ body {
     max-width: 950px;
 }
 
-
-/* BOTAO DAS MODALIDADES*/
-
-.botao-modalidade {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 15px 25px;
-
-    background-color: #E51B23;
-    color: white;
-
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.botao-modalidade:hover {
-    background-color: #b9141b;
-}
-
-/* IMAGENS COM EFEITO PARALAX */
-
+/* Imagens com efeito parallax */
 .imagem-parallax {
     margin-bottom: 50px;
     width: 100%;
@@ -120,35 +86,38 @@ body {
     background-attachment: fixed;
 }
 
-
-/* IMAGEM DA MUSCULAÇÃO */
-
+/* Imagem da musculação */
 .imagem-musculacao {
     background-image: url(../imagens/musculacao.jpg);
 }
 
-
-/* IMAGEM DO RUNNER */
-
+/* Imagem do Runner */
 .imagem-runner {
     background-image: url(../imagens/runner.png);
 }
 
-
-/* ESPAÇO ENTRE AS MODALIDADES */
-
-.modalidade + .modalidade {
-    padding-top: 50px;
-    padding-bottom: 90px;
+/* Botões para saber mais sobre as modalidades */
+.botao-modalidade {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 25px;
+    background-color: #E51B23;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
+.botao-modalidade:hover {
+    background-color: #b9141b;
+}
 
-/* RESPONSIVIDADE */
-
+/* Ajustes para telas menores */
 @media (max-width: 600px) {
 
-    
-
+    /* Apresentação */
     .apresentacao-modalidades {
         padding: 65px 20px;
     }
@@ -161,6 +130,7 @@ body {
         font-size: 16px;
     }
 
+    /* Espaçamento e textos das modalidades */
     .modalidade {
         padding-top: 55px;
     }
@@ -180,16 +150,13 @@ body {
         line-height: 1.7;
     }
 
+    /* Imagens sem parallax fixo no celular */
     .imagem-parallax {
         height: 300px;
-
-        /* Em celulares, o parallax fixo pode não funcionar bem */
         background-attachment: scroll;
     }
 
     .modalidade + .modalidade {
         padding-top: 65px;
     }
-
-
 }

@@ -1,0 +1,192 @@
+
+@charset "UTF-8";
+
+/* Cabeçalho */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+/* Menu de navegação */
+nav {
+    margin-right: 50px;
+    font-size: 17px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #E51B23;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+/* Destaque da página atual no menu */
+nav a.ativo {
+    color: #E51B23;
+    text-decoration: underline;
+    text-decoration-color: #E51B23;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
+/* Ajustes do cabeçalho para celulares */
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        padding: 12px 8px;
+        gap: 8px;
+    }
+
+    .logo img {
+        margin: 0px;
+    }
+
+    nav {
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: clamp(8px, 3vw, 16px);
+    }
+
+    nav a {
+        font-size: clamp(11px, 3.3vw, 14px);
+        white-space: nowrap;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 8% 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 25px;
+}
+
+/* Títulos das seções do rodapé */
+footer h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+    color: white;
+}
+
+/* Logo e identidade da academia */
+.logo-rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-rodape img {
+    width: 85px;
+    margin-bottom: 12px;
+}
+
+.rodape-identidade p {
+    color: #BFC3C9;
+    font-size: 14px;
+}
+
+/* Links de navegação do rodapé */
+.rodape-navegacao ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rodape-navegacao li {
+    margin-bottom: 12px;
+}
+
+/* Links e informações de contato */
+.rodape-navegacao a,
+.rodape-contato a {
+    color: #BFC3C9;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.rodape-contato p {
+    color: #BFC3C9;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* Efeito ao passar o mouse nos links */
+.rodape-navegacao a:hover,
+.rodape-contato a:hover {
+    color: #E51B23;
+}
+
+/* Instagram */
+.instagram {
+    display: inline-block;
+}
+
+.instagram img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: 0.2s;
+}
+
+.instagram img:hover {
+    transform: scale(1.15);
+}
+
+/* Direitos autorais */
+.rodape-direitos {
+    grid-column: 1 / -1;
+    border-top: 1px solid #33383F;
+    padding-top: 20px;
+    text-align: center;
+    color: #AEB3BA;
+    font-size: 13px;
+}
+
+/* Ajustes do rodapé para celulares */
+@media (max-width: 600px) {
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+        padding: 30px 7% 20px;
+    }
+
+    .rodape-direitos {
+        grid-column: 1 / -1;
+    }
+}

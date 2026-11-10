@@ -9,6 +9,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Configurações do fundo e da estrutura da página */
 body {
     color: white;
     min-height: 100vh;
@@ -17,56 +18,19 @@ body {
     text-align: center;
 
     background-image:
-    linear-gradient(90deg, rgba(13, 16, 20, 0.55), rgba(13, 16, 20, 0.35)),
-    url(../imagens/fundo-academia.png);
+        linear-gradient(90deg, rgba(13, 16, 20, 0.55), rgba(13, 16, 20, 0.35)),
+        url(../imagens/fundo-academia.png);
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-/* CABEÇALHO */
-header {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 8px;
-    gap: 20px;
-}
-
-.logo img {
-    width: 75px;
-    display: block;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-nav a {
-    color: #222;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #E51B23;
-    text-decoration: underline;
-    transition: .2s;
-}
-
-nav a.ativo {
-    color: #E51B23;
-    text-decoration: underline;
-    text-decoration-color: #E51B23;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 6px;
-}
 
 /* BANNER INICIAL */
+
+/* Posicionamento dos textos e do botão do banner */
 .inicio {
     min-height: 75vh;
     display: flex;
@@ -77,6 +41,7 @@ nav a.ativo {
     text-align: left;
 }
 
+/* Texto pequeno acima do título */
 .inicio .destaque {
     color: #E51B23;
     font-size: 16px;
@@ -85,6 +50,7 @@ nav a.ativo {
     margin-bottom: 25px;
 }
 
+/* Título principal do banner */
 .inicio h1 {
     color: white;
     font-size: 58px;
@@ -93,11 +59,14 @@ nav a.ativo {
     margin-bottom: 25px;
 }
 
-h1 span {
+/* Cor vermelha e sublinhado dos textos destacados */
+.inicio h1 span,
+.planos h2 span {
     color: #E51B23;
     text-decoration: underline;
 }
 
+/* Texto que aparece abaixo do título */
 .inicio > p:not(.destaque) {
     color: #D0D0D0;
     font-size: 19px;
@@ -106,7 +75,7 @@ h1 span {
     margin-bottom: 30px;
 }
 
-/* BOTÃO */
+/* Botão que leva até a página de modalidades */
 .inicio .botao {
     display: inline-block;
     background-color: #E51B23;
@@ -119,21 +88,27 @@ h1 span {
     transition: background-color .3s ease;
 }
 
+/* Muda a cor do botão ao passar o mouse */
 .inicio .botao:hover {
     background-color: #B9141B;
 }
 
-/* PLANOS EM GRADE */
+
+/* PLANOS */
+
+/* Espaçamento da seção de planos */
 .planos {
     padding: 35px 20px 55px;
 }
 
+/* Título da seção */
 .planos h2 {
     text-align: center;
     font-size: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
+/* Organização dos cartões em uma grade */
 .grade-planos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -143,6 +118,7 @@ h1 span {
     list-style: none;
 }
 
+/* Aparência dos cartões de cada plano */
 .plano {
     display: flex;
     flex-direction: column;
@@ -151,6 +127,7 @@ h1 span {
     padding: 22px 20px;
 }
 
+/* Nome de cada plano */
 .plano h3 {
     font-size: 22px;
     font-weight: 500;
@@ -158,6 +135,7 @@ h1 span {
     margin-bottom: 14px;
 }
 
+/* Organização das durações e dos preços */
 .linha-preco {
     display: flex;
     justify-content: space-between;
@@ -169,10 +147,12 @@ h1 span {
     color: #bdbdbd;
 }
 
+/* Espaço entre os preços e o botão */
 .linha-preco:last-of-type {
     margin-bottom: 20px;
 }
 
+/* Valores dos planos */
 .linha-preco strong {
     font-size: 20px;
     color: #ffffff;
@@ -180,6 +160,7 @@ h1 span {
     white-space: nowrap;
 }
 
+/* Textos menores que aparecem junto aos valores */
 .linha-preco small {
     font-size: 14px;
     font-weight: 400;
@@ -187,6 +168,7 @@ h1 span {
     margin-right: 4px;
 }
 
+/* Botão para entrar em contato sobre o plano */
 .plano .botao-plano,
 .plano .botao-plano:visited {
     display: block;
@@ -201,10 +183,12 @@ h1 span {
     transition: background-color 0.3s ease;
 }
 
+/* Muda a cor do botão ao passar o mouse */
 .plano .botao-plano:hover {
     background-color: #B9141B;
 }
 
+/* Cartão do convênio, com fundo vermelho */
 .plano.convenio {
     background: #E51B23;
     border-color: #E51B23;
@@ -212,38 +196,49 @@ h1 span {
     text-align: center;
 }
 
+/* Espaçamento do nome do convênio */
 .plano.convenio h3 {
     margin-bottom: 8px;
 }
 
+/* Preço do convênio em tamanho maior */
 .plano.convenio strong {
     display: block;
     font-size: 40px;
     margin: 6px 0;
 }
 
+/* Texto que aparece abaixo do preço do convênio */
 .plano.convenio p {
     font-size: 18px;
     color: #ffffff;
 }
 
+/* Aviso sobre as formas de pagamento dos planos */
 .nota-planos {
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     color: #bdbdbd;
     margin-top: 18px;
 }
 
 
-
-
 /* AVALIAÇÕES */
+
+/* Largura e posicionamento da seção */
 .avaliacoes {
     width: min(100%, 1000px);
     margin: 24px auto 40px;
     padding: 0 16px;
 }
 
+/* Título das avaliações */
+.avaliacoes h2 {
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+/* Cartões organizados lado a lado, com rolagem horizontal */
 .avaliacoes-lista {
     display: flex;
     align-items: stretch;
@@ -252,10 +247,12 @@ h1 span {
     scroll-snap-type: x mandatory;
     padding: 8px 4px 20px;
     list-style: none;
+
     scrollbar-width: thin;
     scrollbar-color: #E51B23 #151920;
 }
 
+/* Aparência e organização de cada avaliação */
 .avaliacao {
     flex: 0 0 min(280px, 80%);
     height: 270px;
@@ -268,6 +265,7 @@ h1 span {
     text-align: left;
 }
 
+/* Cinco estrelas que aparecem no início de cada avaliação */
 .avaliacao::before {
     content: "★★★★★";
     display: block;
@@ -278,6 +276,7 @@ h1 span {
     text-align: center;
 }
 
+/* Texto da avaliação, limitado a cinco linhas */
 .avaliacao-texto {
     display: -webkit-box;
     -webkit-line-clamp: 5;
@@ -288,6 +287,7 @@ h1 span {
     line-height: 1.6;
 }
 
+/* Nome de quem deixou a avaliação */
 .avaliacao-nome {
     margin-top: auto;
     font-weight: bold;
@@ -295,26 +295,13 @@ h1 span {
     text-align: center;
 }
 
+
 /* RESPONSIVIDADE */
+
+/* Ajustes para telas menores, como celulares */
 @media (max-width: 600px) {
 
-    header {
-        flex-direction: column;
-        padding: 12px 8px;
-        gap: 8px;
-    }
-
-    nav ul {
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: clamp(8px, 3vw, 16px);
-    }
-
-    nav a {
-        font-size: clamp(11px, 3.3vw, 14px);
-        white-space: nowrap;
-    }
-
+    /* Banner */
     .inicio {
         min-height: 65vh;
         padding: 55px 7%;
@@ -332,24 +319,8 @@ h1 span {
         font-size: 16px;
     }
 
-    .avaliacoes {
-        padding: 0 12px;
-        margin-bottom: 30px;
-    }
 
-    .avaliacoes h2 {
-        font-size: 24px;
-        padding: 30px 0 20px;
-    }
-
-    .avaliacao {
-        flex: 0 0 75%;
-        padding: 14px;
-    }
-
-    .avaliacao-texto {
-        font-size: .9rem;
-    }
+    /* Planos */
     .planos {
         padding: 30px 12px 40px;
     }
@@ -358,6 +329,7 @@ h1 span {
         font-size: 24px;
     }
 
+    /* Mostra um cartão por linha no celular */
     .grade-planos {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -381,5 +353,26 @@ h1 span {
 
     .plano.convenio strong {
         font-size: 32px;
+    }
+
+
+    /* Avaliações */
+    .avaliacoes {
+        padding: 0 12px;
+        margin-bottom: 30px;
+    }
+
+    .avaliacoes h2 {
+        font-size: 24px;
+        padding: 30px 0 20px;
+    }
+
+    .avaliacao {
+        flex: 0 0 75%;
+        padding: 14px;
+    }
+
+    .avaliacao-texto {
+        font-size: .9rem;
     }
 }

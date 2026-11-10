@@ -1,6 +1,7 @@
+
 @charset "UTF-8";
 
-/* CONFIGURAÇÕES GERAIS */
+/* Configurações gerais */
 * {
     margin: 0;
     padding: 0;
@@ -24,8 +25,7 @@ body {
     background-attachment: fixed;
 }
 
-
-/* TÍTULOS */
+/* Título principal */
 h1 {
     margin: 0;
     padding: 45px 0 25px;
@@ -34,15 +34,7 @@ h1 {
     color: white;
 }
 
-h2 {
-    margin: 0;
-    padding: 45px 0 25px;
-    font-size: 30px;
-    text-align: center;
-    color: white;
-}
-
-/* GALERIA DA ACADEMIA */
+/* Galeria de fotos da academia */
 .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -64,7 +56,7 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito de aumentar só no computador, com mouse */
+/* Efeito de aumentar as fotos ao passar o mouse */
 @media (hover: hover) and (pointer: fine) {
     .galeria img:hover {
         transform: scale(1.25);
@@ -73,7 +65,16 @@ h2 {
     }
 }
 
-/* EQUIPE: VITRINE COM UMA PESSOA POR VEZ */
+/* Título da equipe */
+h2 {
+    margin: 0;
+    padding: 45px 0 25px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+/* Fotos e nome dos integrantes da equipe */
 .vitrine {
     width: min(100%, 360px);
     margin: 24px auto 40px;
@@ -94,6 +95,7 @@ h2 {
     text-align: center;
 }
 
+/* Controles da vitrine */
 .vitrine-controles {
     display: flex;
     justify-content: center;
@@ -113,32 +115,16 @@ h2 {
     cursor: pointer;
 }
 
-/* ADAPTAÇÃO PARA CELULARES */
+/* Ajustes para telas menores */
 @media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        padding: 12px 8px;
-        gap: 8px;
-    }
 
-    nav ul {
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: clamp(8px, 3vw, 16px);
-    }
-
-    nav a {
-        font-size: clamp(11px, 3.3vw, 14px);
-        white-space: nowrap;
-    }
-
-    /* Duas colunas na galeria */
+    /* Galeria com duas colunas no celular */
     .galeria {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
     }
 
-    /* Sem animação no celular */
+    /* Remove o efeito de aumentar as fotos */
     .galeria img:hover {
         transform: none;
         box-shadow: none;

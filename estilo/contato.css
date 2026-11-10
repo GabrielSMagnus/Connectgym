@@ -1,13 +1,13 @@
+
 @charset "UTF-8";
 
-/* CONFIGURAÇÕES GERAIS*/
+/* Configurações gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 
 body {
     background-color: #0D1014;
@@ -25,7 +25,7 @@ body {
     background-attachment: fixed;
 }
 
-/* TITULO */
+/* Título da página */
 .titulo-pagina {
     width: 100%;
     color: white;
@@ -34,7 +34,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-/* A BARRINHA VERMELHA EMBAIXO */
+
+/* Barrinha vermelha embaixo do título */
 .titulo-pagina::after {
     content: "";
     display: block;
@@ -45,8 +46,7 @@ body {
     border-radius: 2px;
 }
 
-
-/* ORGANIZAÇÃO DAS CAIXAS */
+/* Caixas de endereço, horário e dúvidas */
 .caixa-infoDuvida,
 .caixa-infoEndereço,
 .caixa-info {
@@ -57,45 +57,43 @@ body {
     width: 300px;
     min-height: 300px;
     color: white;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
 }
 
-/* ENDEREÇO */
-.caixa-infoEndereço {
-    margin: 0;
-}
-
-h3.Endereço{
+/* Endereço */
+h3.Endereço {
     text-align: center;
 }
-p.rota{
+
+p.rota {
     text-align: center;
 }
 
 .chegar {
-  display: block;
-  width: fit-content;
-  margin: 16px auto 0;
-   padding: 14px 22px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #fff;
-  background: red;
+    display: block;
+    width: fit-content;
+    margin: 16px auto 0;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background: red;
 }
 
-/* HORÁRIO */
-.caixa-info {
-    margin: 0;
-}
-h3.atendimento{
+/* Horário de atendimento */
+h3.atendimento {
     text-align: center;
 }
-p.horario{
+
+p.horario {
     text-align: center;
     margin-top: 25px;
 }
 
-/* TÍTULOS */
+/* Títulos das caixas */
 .Duvida,
 .Endereço,
 .atendimento {
@@ -103,47 +101,35 @@ p.horario{
     margin-bottom: 15px;
 }
 
-/* TEXTOS */
+/* Textos das caixas */
 .caixa-infoDuvida p,
 .caixa-infoEndereço p,
 .caixa-info p {
     line-height: 1.6;
 }
 
-/* COLOCA AS CAIXAS LADO A LADO */
-.caixa-infoDuvida,
-.caixa-infoEndereço,
-.caixa-info {
-    display: inline-block;
-    vertical-align: top;
-    margin: 20px;
-}
-
-
-/* DUVIDAS */
-
-h3.Duvida{
-    text-align: center;
-} 
-
-p.telefone{
+/* Dúvidas e WhatsApp */
+h3.Duvida {
     text-align: center;
 }
 
-a.whatsapp{
+p.telefone {
+    text-align: center;
+}
+
+a.whatsapp {
     display: block;
-  width: fit-content;
-  margin: 16px auto 0;
-  padding: 14px 22px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #fff;
-  background: red;
+    width: fit-content;
+    margin: 16px auto 0;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background: red;
 }
 
-/* MAPA */
-
+/* Mapa da localização */
 .section-mapa {
     padding: 20px;
 }
@@ -157,24 +143,10 @@ a.whatsapp{
     margin: 20px auto 40px;
 }
 
-/* ADAPTAÇÃO PARA CELULARES */
+/* Ajustes para telas menores */
 @media (max-width: 600px) {
-   header {
-        flex-direction: column;
-        padding: 12px 8px;
-        gap: 8px;
-    }
 
-    nav ul {
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: clamp(8px, 3vw, 16px);
-    }
-
-    nav a {
-        font-size: clamp(11px, 3.3vw, 14px);
-        white-space: nowrap;
-    }
+    /* Coloca as caixas uma abaixo da outra */
     .caixa-infoDuvida,
     .caixa-infoEndereço,
     .caixa-info {
@@ -184,8 +156,10 @@ a.whatsapp{
         min-height: auto;
         margin: 15px auto;
     }
-     .mapa {
+
+    /* Diminui a altura do mapa */
+    .mapa {
         height: 250px;
         width: calc(100% - 30px);
     }
-}   
+}
