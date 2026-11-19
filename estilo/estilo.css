@@ -305,6 +305,7 @@ body {
     margin-bottom: 16px;
     font-size: 1rem;
     line-height: 1.6;
+    text-align: justify;
 }
 
 /* Nome de quem deixou a avaliação */

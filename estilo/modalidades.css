@@ -59,6 +59,7 @@ body {
     margin: 0 auto;
     color: white;
     padding-bottom: 0;
+    text-align: justify;
 }
 
 .texto-modalidade h2 {
